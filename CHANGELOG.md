@@ -1,7 +1,10 @@
 # Changelog
 
+## 0.3.1 (2026-11-24)
+- The name is now written as one word, **CrateExpectations**, everywhere: the AddOns list, chat messages, the settings page and the release files.
+
 ## 0.3.0 (2026-11-24)
-- New name: **Crate Expectations** (it was called Waylaid while in testing). The command is now `/crate`.
+- New name: **CrateExpectations** (it was called Waylaid while in testing). The command is now `/crate`.
 - Your settings and everything it learned carry over.
 
 ## 0.2.2 (2026-11-24)

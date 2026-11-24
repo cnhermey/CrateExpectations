@@ -1,8 +1,8 @@
-# CurseForge listing for Crate Expectations
+# CurseForge listing for CrateExpectations
 
 Copy these into the CurseForge project form (Author Console → Create Project).
 
-- **Name:** Crate Expectations
+- **Name:** CrateExpectations
 - **Game / flavor:** World of Warcraft → Forever
 - **Summary** (one line): Earn Merchant's Favor fast: every Waylaid Crate tooltip shows what each bundle costs at the Auction House and marks the cheapest one to buy, using Auctionator prices.
 - **Main category:** Auction & Economy
@@ -14,14 +14,14 @@ Copy these into the CurseForge project form (Author Console → Create Project).
 
 ## Description (Markdown)
 
-**Crate Expectations** is the quick way to earn Merchant's Favor in WoW: Forever: buy the cheapest bundle on the Auction House, fill your Waylaid Crate, and turn it in. Hover a crate to see what every bundle costs, and see at a glance in your bags how much Favor each crate is worth.
+**CrateExpectations** is the quick way to earn Merchant's Favor in WoW: Forever: buy the cheapest bundle on the Auction House, fill your Waylaid Crate, and turn it in. Hover a crate to see what every bundle costs, and see at a glance in your bags how much Favor each crate is worth.
 
 No windows, no extra buttons: just a few lines on the crate's tooltip and a small badge on its icon.
 
 ---
 
 ### Know the cheapest bundle before you buy
-A Waylaid Crate lists several bundles, and you only need to fill one. Crate Expectations prices every bundle from your Auctionator scans and marks the cheapest, so you know exactly what to buy:
+A Waylaid Crate lists several bundles, and you only need to fill one. CrateExpectations prices every bundle from your Auctionator scans and marks the cheapest, so you know exactly what to buy:
 
 > **Bundle costs (Auctionator estimate)**
 > 20 Dream Dust (17s each) ... 3g 40s
@@ -44,12 +44,12 @@ Every read or filled crate in your bags shows the **Merchant's Favor icon and th
 | Expert | 15 | 30 |
 | Artisan | 20 | 40 |
 
-**It learns the real number.** When you hand in a crate, Crate Expectations notes how much Favor you actually received and shows that for that crate from then on. A hand-in doubled by the Performance Bonus Legacy perk doesn't count, so a lucky turn-in won't change the number.
+**It learns the real number.** When you hand in a crate, CrateExpectations notes how much Favor you actually received and shows that for that crate from then on. A hand-in doubled by the Performance Bonus Legacy perk doesn't count, so a lucky turn-in won't change the number.
 
 Works in **Blizzard's bags** and **EllesmereUI Bags**.
 
 ### Looks like part of the game
-Plain tooltip lines in Blizzard's colors, with the game's own coin icons and its real Merchant's Favor icon. Settings are a normal page in Esc > Options > AddOns > Crate Expectations, where you can turn off each part:
+Plain tooltip lines in Blizzard's colors, with the game's own coin icons and its real Merchant's Favor icon. Settings are a normal page in Esc > Options > AddOns > CrateExpectations, where you can turn off each part:
 - Show bundle costs
 - Show price each
 - Mark the cheapest bundle
@@ -57,7 +57,7 @@ Plain tooltip lines in Blizzard's colors, with the game's own coin icons and its
 - Show Favor on crate tooltips
 
 ### Requires Auctionator
-Crate Expectations reads prices from **Auctionator**, so install it too. Do a full scan at the Auction House, or just search for the materials you need, and the prices appear on your crates.
+CrateExpectations reads prices from **Auctionator**, so install it too. Do a full scan at the Auction House, or just search for the materials you need, and the prices appear on your crates.
 
 ---
 

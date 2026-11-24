@@ -1,4 +1,4 @@
--- Crate Expectations: shared helpers.
+-- CrateExpectations: shared helpers.
 -- Every file receives the same private namespace table `ns` from the TOC loader.
 local addonName, ns = ...
 
@@ -52,8 +52,8 @@ end
 -- Output
 ---------------------------------------------------------------------------
 -- Native look: messages look like Blizzard system messages (system chat
--- color, short "Crate Expectations:" prefix).
-local TAG = "Crate Expectations: "
+-- color, short "CrateExpectations:" prefix).
+local TAG = "CrateExpectations: "
 
 local function ToText(v)
   if ns.IsSecret(v) then return "<secret>" end

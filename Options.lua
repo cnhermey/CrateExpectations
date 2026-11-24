@@ -1,4 +1,4 @@
--- Crate Expectations: settings page in Esc > Options > AddOns > Crate Expectations.
+-- CrateExpectations: settings page in Esc > Options > AddOns > CrateExpectations.
 --
 -- Every setting is a Blizzard control (UICheckButtonTemplate checkboxes,
 -- MinimalSliderWithSteppers sliders, UIPanelButtonTemplate buttons), and
@@ -9,7 +9,7 @@ local _, ns = ...
 local O = { pages = {} }
 ns.Options = O
 
-local NAME = "Crate Expectations"
+local NAME = "CrateExpectations"
 
 -- Central setter: every control goes through here.
 function O:Set(key, value)
@@ -204,7 +204,7 @@ function O:RefreshAll()
 end
 
 ---------------------------------------------------------------------------
--- Esc > Options > AddOns > Crate Expectations: the page on a Blizzard canvas.
+-- Esc > Options > AddOns > CrateExpectations: the page on a Blizzard canvas.
 ---------------------------------------------------------------------------
 local function RegisterOptions()
   if O.canvas then return end

@@ -1,4 +1,4 @@
--- Crate Expectations: Merchant's Favor per crate, shown as a badge on the crate's bag
+-- CrateExpectations: Merchant's Favor per crate, shown as a badge on the crate's bag
 -- icon (Favor icon + amount, top center) and as a line on its tooltip.
 --
 -- How much Favor a crate gives isn't in the game data addons can read, so we

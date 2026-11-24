@@ -77,7 +77,7 @@ jobs:
             on && /^## / { exit }
             on { print }
           ' CHANGELOG.md > notes.md
-          if ! grep -q '[^[:space:]]' notes.md; then echo "Crate Expectations v$V" > notes.md; fi
+          if ! grep -q '[^[:space:]]' notes.md; then echo "CrateExpectations v$V" > notes.md; fi
           cat >> notes.md <<NOTES
 
           ### Install
@@ -93,7 +93,7 @@ jobs:
           V: ${{ steps.v.outputs.version }}
         run: |
           gh release create "v$V" "dist/CrateExpectations-v$V.zip" \
-            --title "Crate Expectations v$V" \
+            --title "CrateExpectations v$V" \
             --notes-file notes.md \
             --target "$GITHUB_SHA"
 
@@ -124,11 +124,11 @@ jobs:
             exit 1
           fi
           echo "Game versions: $ids"
-          jq -n --rawfile cl notes.md --arg dn "Crate Expectations v$V" --argjson gv "$ids" \
+          jq -n --rawfile cl notes.md --arg dn "CrateExpectations v$V" --argjson gv "$ids" \
             '{changelog: $cl, changelogType: "markdown", displayName: $dn, gameVersions: $gv, releaseType: "release"}' > meta.json
           curl -sSf -H "X-Api-Token: $CF_API_KEY" \
             -F "metadata=<meta.json" \
             -F "file=@dist/CrateExpectations-v$V.zip" \
             "$api/projects/$pid/upload-file"
           echo
-          echo "Uploaded Crate Expectations v$V to CurseForge project $pid."
+          echo "Uploaded CrateExpectations v$V to CurseForge project $pid."

@@ -1,4 +1,4 @@
-# Crate Expectations (v0.3.0)
+# CrateExpectations (v0.3.1)
 
 A small WoW: Forever addon (formerly Waylaid) that shows what each Waylaid crate bundle costs at the Auction House, using Auctionator's prices, and how much Merchant's Favor each crate gives.
 
@@ -6,8 +6,8 @@ A small WoW: Forever addon (formerly Waylaid) that shows what each Waylaid crate
 - **Price each.** The price of one item shows in gray next to the amount.
 - **Cheapest bundle in green.** You only need to fill one bundle, so the cheapest one stands out.
 - **Merchant's Favor on your crates.** In your bags, each crate shows the Merchant's Favor icon and how much Favor it gives, centered along the top of its icon. Its tooltip gets a "Merchant's Favor" line too. Works in Blizzard's bags and EllesmereUI Bags.
-- **Learns the real amount.** When you hand in a crate, Crate Expectations sees how much Favor you got and uses that number for that crate from then on.
-- **Never guesses.** Items Crate Expectations can't identify say "unknown item"; items Auctionator hasn't scanned say "no price".
+- **Learns the real amount.** When you hand in a crate, CrateExpectations sees how much Favor you got and uses that number for that crate from then on.
+- **Never guesses.** Items CrateExpectations can't identify say "unknown item"; items Auctionator hasn't scanned say "no price".
 
 Needs **Auctionator**. Prices are from your last Auctionator scan: the cheapest listing times the amount. If fewer are listed at that price than you need, buying them all costs more, so the header says "estimate".
 
@@ -15,7 +15,7 @@ Needs **Auctionator**. Prices are from your last Auctionator scan: the cheapest 
 The costs are ordinary tooltip lines in Blizzard's colors with the game's own coin icons. The settings page is a normal Esc > Options > AddOns page with Blizzard checkboxes.
 
 ### Merchant's Favor amounts
-The game doesn't tell addons how much Favor a crate gives, so Crate Expectations uses the published amounts (Wowhead's Forever supply-faction guides and player reports):
+The game doesn't tell addons how much Favor a crate gives, so CrateExpectations uses the published amounts (Wowhead's Forever supply-faction guides and player reports):
 
 | Tier | White crates (gathered: Herbs, Ore, Textiles, Curiosities) | Green crates (crafted: Fabrics, Ingots, Parts) |
 |---|---|---|
@@ -24,10 +24,10 @@ The game doesn't tell addons how much Favor a crate gives, so Crate Expectations
 | Expert | 15 | 30 |
 | Artisan | 20 | 40 |
 
-Read crates are matched by the kind in their name; filled crates ("Sealed Apprentice Crate") by their quality, white or green. The tooltip says "published amount" until you've handed in that crate yourself. The Legacy perk Performance Bonus sometimes doubles a hand-in; Crate Expectations shows the normal amount and doesn't learn a doubled one. Unread crates ("Waylaid Crate" with no label) get no badge.
+Read crates are matched by the kind in their name; filled crates ("Sealed Apprentice Crate") by their quality, white or green. The tooltip says "published amount" until you've handed in that crate yourself. The Legacy perk Performance Bonus sometimes doubles a hand-in; CrateExpectations shows the normal amount and doesn't learn a doubled one. Unread crates ("Waylaid Crate" with no label) get no badge.
 
 ### Item names
-Crate tooltips only show item names, and the game only finds an item by name once it has seen it. Crate Expectations learns names from a list of common crafting materials (names come from the game, not the addon), from your bags, and from every item tooltip you see, and remembers them. If a bundle says "unknown item", hover or loot that item once.
+Crate tooltips only show item names, and the game only finds an item by name once it has seen it. CrateExpectations learns names from a list of common crafting materials (names come from the game, not the addon), from your bags, and from every item tooltip you see, and remembers them. If a bundle says "unknown item", hover or loot that item once.
 
 ## Install
 1. Copy the `CrateExpectations` folder into `World of Warcraft\_forever_\Interface\AddOns\`. Copy it; don't symlink it (symlinked folders lose their settings).
@@ -66,11 +66,11 @@ Built for Interface 16001. Check yours with `/run print(select(4, GetBuildInfo()
 
 The Favor icon comes from the currency itself (`C_CurrencyInfo.GetCurrencyInfo(3402)`). Bag badges use EllesmereUI Bags' public overlay hook (`EUI_Bags.RegisterItemOverlayIcon`) and a post-hook on Blizzard's container frames.
 
-Prices come from Auctionator's public API, `Auctionator.API.v1.GetAuctionPriceByItemID`. Crate Expectations only adds lines after the game builds a tooltip (`TooltipDataProcessor`); it never changes Blizzard's lines.
+Prices come from Auctionator's public API, `Auctionator.API.v1.GetAuctionPriceByItemID`. CrateExpectations only adds lines after the game builds a tooltip (`TooltipDataProcessor`); it never changes Blizzard's lines.
 
 ## Needs in-game verification
 - Crate tooltips are found by the text "Fill the crate" or an item name starting with "Waylaid" (English client only for now).
-- The bundle list arrives in the tooltip data as one line with line breaks, as in the screenshot; Crate Expectations also handles one bundle per line.
+- The bundle list arrives in the tooltip data as one line with line breaks, as in the screenshot; CrateExpectations also handles one bundle per line.
 - `C_Item.GetItemNameByID` and `RequestLoadItemDataByID` fill in the known materials at login (probe: "materials from game").
 - The crafting materials keep their classic item IDs on Forever (Dream Dust 11176; probe "Sample" line).
 - Auctionator keys plain materials by item ID, so `GetAuctionPriceByItemID` finds them.

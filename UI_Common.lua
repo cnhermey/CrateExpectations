@@ -1,4 +1,4 @@
--- Crate Expectations: shared look. Style rule (as our other addons): every
+-- CrateExpectations: shared look. Style rule (as our other addons): every
 -- element should look like Blizzard's own UI, so colors come from Blizzard's
 -- constants and art from Blizzard's textures, with fallbacks.
 local _, ns = ...

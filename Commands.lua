@@ -1,4 +1,4 @@
--- Crate Expectations: /crate. Style rules: Blizzard system-message look
+-- CrateExpectations: /crate. Style rules: Blizzard system-message look
 -- (ns.Print / ns.PrintLine) and short phrases.
 local _, ns = ...
 local P = function(text) ns.PrintLine(text) end

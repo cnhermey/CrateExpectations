@@ -1,4 +1,4 @@
--- Crate Expectations: adds Auction House costs to Waylaid crate tooltips.
+-- CrateExpectations: adds Auction House costs to Waylaid crate tooltips.
 --
 -- A crate's tooltip lists bundles like "- 20 Dream Dust". For each bundle we
 -- look up Auctionator's last-scanned price for one item and multiply by the

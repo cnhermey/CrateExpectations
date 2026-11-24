@@ -1,4 +1,4 @@
--- Crate Expectations: turns an item name from a crate tooltip ("Dream Dust") into an
+-- CrateExpectations: turns an item name from a crate tooltip ("Dream Dust") into an
 -- item ID, which is what Auctionator's price lookup needs.
 --
 -- Crate tooltips only show names, and the game only finds an item by name

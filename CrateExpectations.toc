@@ -1,8 +1,8 @@
 ## Interface: 16001
-## Title: Crate Expectations
+## Title: CrateExpectations
 ## Notes: Shows what each Waylaid crate bundle costs at the Auction House, using Auctionator's prices, and the Merchant's Favor each crate gives.
 ## Author: cnhermey
-## Version: 0.3.0
+## Version: 0.3.1
 ## X-Curse-Project-ID: 1829068
 ## Dependencies: Auctionator
 ## OptionalDeps: EllesmereUIBags

@@ -1,4 +1,4 @@
--- Crate Expectations: event dispatch, internal message bus, saved settings.
+-- CrateExpectations: event dispatch, internal message bus, saved settings.
 local addonName, ns = ...
 
 ---------------------------------------------------------------------------
