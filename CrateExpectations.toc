@@ -1,0 +1,19 @@
+## Interface: 16001
+## Title: Crate Expectations
+## Notes: Shows what each Waylaid crate bundle costs at the Auction House, using Auctionator's prices, and the Merchant's Favor each crate gives.
+## Author: cnhermey
+## Version: 0.3.0
+## Dependencies: Auctionator
+## OptionalDeps: EllesmereUIBags
+## SavedVariables: CrateExpectationsDB
+## Category: Auction
+## IconTexture: Interface\Icons\INV_Crate_01
+
+Util.lua
+Core.lua
+UI_Common.lua
+Items.lua
+Crate.lua
+Favor.lua
+Options.lua
+Commands.lua

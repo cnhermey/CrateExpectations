@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="55%" r="75%">
+      <stop offset="0" stop-color="#3d2a16"/>
+      <stop offset="0.4" stop-color="#1c1a2a"/>
+      <stop offset="1" stop-color="#07070f"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="58%" r="42%">
+      <stop offset="0" stop-color="#ffc66b" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#d9822b" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#d9822b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c58a4a"/>
+      <stop offset="1" stop-color="#7a4a22"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8a5a2e"/>
+      <stop offset="1" stop-color="#3e2210"/>
+    </linearGradient>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7b46e"/>
+      <stop offset="1" stop-color="#b47a3e"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9a6332"/>
+      <stop offset="1" stop-color="#5a3216"/>
+    </linearGradient>
+    <linearGradient id="iron" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9aa0a6"/>
+      <stop offset="0.5" stop-color="#565c63"/>
+      <stop offset="1" stop-color="#25282c"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4e2b8"/>
+      <stop offset="1" stop-color="#c9a970"/>
+    </linearGradient>
+    <radialGradient id="coin" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#fff4b0"/>
+      <stop offset="0.45" stop-color="#f2c230"/>
+      <stop offset="1" stop-color="#9a6a0a"/>
+    </radialGradient>
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#000" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="72%">
+      <stop offset="0.6" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.75"/>
+    </radialGradient>
+    <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="3" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="4"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9 0.04" numOctaves="2" seed="11" result="n"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.15  0 0 0 0 0.08  0 0 0 0 0.02  0 0 0 0.6 -0.2" in="n"/>
+    </filter>
+    <filter id="paint" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="4" seed="7" result="n"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 -0.12" in="n"/>
+    </filter>
+    <filter id="blur6"><feGaussianBlur stdDeviation="6"/></filter>
+    <clipPath id="frontClip"><path d="M112 214 L318 246 L318 432 L112 400 Z"/></clipPath>
+    <clipPath id="sideClip"><path d="M318 246 L408 204 L408 384 L318 432 Z"/></clipPath>
+  </defs>
+
+  <!-- background -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" filter="url(#paint)"/>
+  <rect width="512" height="512" fill="url(#glow)"/>
+
+  <g transform="translate(256 272) scale(1.18) translate(-262 -310)">
+  <!-- ground shadow -->
+  <ellipse cx="262" cy="430" rx="190" ry="38" fill="url(#shadow)"/>
+
+  <g filter="url(#rough)" stroke="#1a0e06" stroke-linejoin="round">
+    <!-- faces -->
+    <path d="M112 214 L204 172 L408 204 L318 246 Z" fill="url(#top)" stroke-width="6"/>
+    <path d="M318 246 L408 204 L408 384 L318 432 Z" fill="url(#side)" stroke-width="6"/>
+    <path d="M112 214 L318 246 L318 432 L112 400 Z" fill="url(#front)" stroke-width="6"/>
+  </g>
+
+  <!-- wood grain -->
+  <g clip-path="url(#frontClip)"><rect x="100" y="200" width="230" height="240" filter="url(#grain)"/></g>
+  <g clip-path="url(#sideClip)"><rect x="310" y="190" width="110" height="250" filter="url(#grain)"/></g>
+
+  <g filter="url(#rough)" stroke="#1a0e06" stroke-linejoin="round" stroke-linecap="round">
+    <!-- plank seams, front -->
+    <path d="M112 260 L318 292" stroke-width="4" fill="none" opacity="0.8"/>
+    <path d="M112 307 L318 339" stroke-width="4" fill="none" opacity="0.8"/>
+    <path d="M112 353 L318 385" stroke-width="4" fill="none" opacity="0.8"/>
+    <!-- plank seams, side and top -->
+    <path d="M318 294 L408 252" stroke-width="4" fill="none" opacity="0.7"/>
+    <path d="M318 340 L408 298" stroke-width="4" fill="none" opacity="0.7"/>
+    <path d="M158 193 L362 225" stroke-width="4" fill="none" opacity="0.6"/>
+
+    <!-- frame boards, front -->
+    <path d="M112 214 L318 246 L318 266 L112 234 Z" fill="url(#frame)" stroke-width="4"/>
+    <path d="M112 380 L318 412 L318 432 L112 400 Z" fill="url(#frame)" stroke-width="4"/>
+    <path d="M112 214 L134 217 L134 403 L112 400 Z" fill="url(#frame)" stroke-width="4"/>
+    <path d="M296 243 L318 246 L318 432 L296 429 Z" fill="url(#frame)" stroke-width="4"/>
+    <!-- diagonal brace -->
+    <path d="M134 238 L150 240 L296 409 L280 407 Z" fill="url(#frame)" stroke-width="4"/>
+    <!-- frame boards, side -->
+    <path d="M318 246 L408 204 L408 222 L318 264 Z" fill="#5a3418" stroke-width="4"/>
+    <path d="M318 414 L408 366 L408 384 L318 432 Z" fill="#4a2a12" stroke-width="4"/>
+    <path d="M394 211 L408 204 L408 384 L394 391 Z" fill="#4a2a12" stroke-width="4"/>
+
+    <!-- iron corners -->
+    <path d="M104 206 L144 211 L140 226 L118 223 L120 248 L106 246 Z" fill="url(#iron)" stroke-width="3"/>
+    <path d="M104 408 L144 413 L140 398 L118 395 L120 370 L106 372 Z" fill="url(#iron)" stroke-width="3"/>
+    <path d="M326 240 L310 238 L306 252 L314 254 L314 274 L326 276 Z" fill="url(#iron)" stroke-width="3"/>
+    <path d="M326 440 L310 438 L306 424 L314 422 L314 402 L326 400 Z" fill="url(#iron)" stroke-width="3"/>
+    <path d="M326 240 L414 198 L414 232 L400 238 L400 214 L326 252 Z" fill="url(#iron)" stroke-width="3"/>
+    <!-- nails -->
+    <g fill="#c9ced4" stroke-width="2">
+      <circle cx="123" cy="226" r="3.5"/><circle cx="123" cy="390" r="3.5"/>
+      <circle cx="307" cy="258" r="3.5"/><circle cx="307" cy="420" r="3.5"/>
+      <circle cx="210" cy="241" r="3"/><circle cx="210" cy="405" r="3"/>
+    </g>
+  </g>
+
+  <!-- shipping tag on a string -->
+  <g filter="url(#rough)" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M232 258 C236 280, 222 292, 212 300" stroke="#e8d3a0" stroke-width="4" fill="none"/>
+    <circle cx="232" cy="257" r="5" fill="url(#iron)" stroke="#1a0e06" stroke-width="2"/>
+    <g transform="rotate(-14 196 330)">
+      <path d="M160 300 L222 300 L236 316 L236 360 L160 360 Z" fill="url(#paper)" stroke="#3a2410" stroke-width="4"/>
+      <circle cx="223" cy="316" r="5" fill="#3a2410"/>
+      <path d="M170 322 L214 322 M170 336 L208 336 M170 350 L198 350" stroke="#7a5a30" stroke-width="4" fill="none" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- Merchant's Favor coin -->
+  <g filter="url(#rough)">
+    <circle cx="376" cy="402" r="58" fill="#000" opacity="0.4" filter="url(#blur6)"/>
+    <circle cx="370" cy="394" r="56" fill="url(#coin)" stroke="#4a3004" stroke-width="6"/>
+    <circle cx="370" cy="394" r="42" fill="none" stroke="#a6740c" stroke-width="5"/>
+    <!-- small crate stamped on the coin -->
+    <path d="M348 384 L370 374 L394 380 L372 390 Z" fill="#ffe27a" stroke="#7a5206" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M348 384 L372 390 L372 418 L348 410 Z" fill="#d9a21c" stroke="#7a5206" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M372 390 L394 380 L394 406 L372 418 Z" fill="#b8820f" stroke="#7a5206" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M346 360 C352 352, 362 349, 368 350" stroke="#fffbe0" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g>
+
+  <!-- warm rim light on the crate's top edge -->
+  <path d="M116 212 L204 173 L404 204" stroke="#ffd58a" stroke-width="3" fill="none" opacity="0.55" filter="url(#blur6)"/>
+
+  </g>
+
+  <!-- vignette and frame like Toasty -->
+  <rect width="512" height="512" fill="url(#vignette)"/>
+  <rect x="12" y="12" width="488" height="488" fill="none" stroke="#000" stroke-width="10"/>
+  <rect x="16" y="16" width="480" height="480" fill="none" stroke="#3a3a44" stroke-width="2"/>
+</svg>
