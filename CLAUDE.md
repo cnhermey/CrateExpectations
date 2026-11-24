@@ -20,6 +20,6 @@ Every update ships as a release, and GitHub builds it, not Claude.
    as `CrateExpectations/` and creates release `vX.Y.Z` with `CrateExpectations-vX.Y.Z.zip`.
 4. Copy the changed files into the player's AddOns folder too.
 
-CurseForge upload runs once `CF_API_KEY` is a repository secret and
-`CrateExpectations.toc` has `## X-Curse-Project-ID: <id>`; until then that step skips.
+CurseForge project ID: **1829068** (in the TOC as `## X-Curse-Project-ID`).
+The upload runs once `CF_API_KEY` is a repository secret; until then that step skips.
 Files that shouldn't be in the zip go in `.gitattributes` as `export-ignore`.
